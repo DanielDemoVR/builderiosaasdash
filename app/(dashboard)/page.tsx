@@ -81,7 +81,7 @@ export default function Page() {
         <div>
           <h1 className="text-2xl font-semibold tracking-tight">Main Dashboard</h1>
           <p className="text-sm text-muted-foreground">
-            Overview of key metrics for your SaaS business.
+            Overview of the key indicators of your SaaS business.
           </p>
         </div>
         <div className="flex items-center gap-2">
