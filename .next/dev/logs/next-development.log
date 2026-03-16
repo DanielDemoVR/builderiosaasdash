@@ -12,3 +12,4 @@
 [02:03:49.291] Browser DEBUG   [Fusion] Error in selection: {"error":"Selection aborted","success":false}
 [02:03:53.358] Server  LOG     ✓ Compiled in 22ms
 [02:03:53.588] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[02:04:00.796] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
