@@ -1,2 +1,15 @@
-[00:00:00.482] Server  LOG     ✓ Ready in 305ms
-[00:00:02.979] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:00.834] Server  LOG     ✓ Ready in 550ms
+[00:00:09.351] Server  LOG     ○ Compiling / ...
+[00:00:25.669] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:59:03.054] Browser DEBUG   binding to error
+[01:59:05.600] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[02:01:46.115] Server  LOG     ✓ Compiled in 82ms
+[02:01:56.228] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[02:02:02.306] Browser ERROR   unhandledRejection: ChunkLoadError: Failed to load chunk /_next/static/chunks/node_modules_next_dist_be32b49c._.js from module [project]/node_modules/next/dist/compiled/react-server-dom-turbopack/cjs/react-server-dom-turbopack-client.browser.development.js [app-client] (ecmascript)
+[02:02:03.007] Browser DEBUG   binding to error
+[02:02:03.007] Browser DEBUG   binding to error
+[02:02:42.177] Browser DEBUG   [Fusion] Error in selection: {"error":"Selection aborted","success":false}
+[02:03:49.291] Browser DEBUG   [Fusion] Error in selection: {"error":"Selection aborted","success":false}
+[02:03:53.358] Server  LOG     ✓ Compiled in 22ms
+[02:03:53.588] Browser ERROR   uncaughtError: Error: Internal Next.js error: Router action dispatched before initialization.
+[02:04:00.796] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
