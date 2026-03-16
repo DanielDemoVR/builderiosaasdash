@@ -130,6 +130,50 @@ export default function Page() {
         </CardContent>
       </Card>
 
+      {/* Global Activity Section */}
+      <div>
+        <div className="mb-4">
+          <h3 className="text-lg font-semibold leading-none tracking-tight">
+            Global Activity
+          </h3>
+          <p className="text-sm text-muted-foreground">
+            Real-time metrics from around the world
+          </p>
+        </div>
+        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          <Card>
+            <CardHeader className="pb-2">
+              <CardDescription>Top Country</CardDescription>
+              <CardTitle className="text-2xl">USA</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <p className="text-sm text-muted-foreground">45% of traffic</p>
+            </CardContent>
+          </Card>
+          <Card>
+            <CardHeader className="pb-2">
+              <CardDescription>Active Sessions</CardDescription>
+              <CardTitle className="text-2xl">1,240</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <p className="text-sm text-muted-foreground">Currently online</p>
+            </CardContent>
+          </Card>
+          <Card>
+            <CardHeader className="pb-2">
+              <CardDescription>Server Status</CardDescription>
+              <CardTitle className="text-2xl">Operational</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <p className="text-sm text-muted-foreground">
+                <span className="inline-block h-2 w-2 rounded-full bg-emerald-600 mr-2"></span>
+                All systems operational
+              </p>
+            </CardContent>
+          </Card>
+        </div>
+      </div>
+
       {/* Recent Transactions */}
       <Card>
         <CardHeader className="flex-row items-center justify-between space-y-0">
