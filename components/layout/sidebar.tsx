@@ -10,6 +10,9 @@ import {
   Settings,
   Menu,
   X,
+  Users2,
+  Shield,
+  ChevronDown,
 } from "lucide-react";
 
 const nav = [
@@ -20,8 +23,14 @@ const nav = [
   { name: "Settings", href: "/settings", icon: Settings },
 ];
 
+const teamManagementItems = [
+  { name: "Users", href: "/team/users", icon: Users2 },
+  { name: "Roles", href: "/team/roles", icon: Shield },
+];
+
 export function Sidebar() {
   const [open, setOpen] = useState(false);
+  const [teamManagementOpen, setTeamManagementOpen] = useState(false);
 
   return (
     <>
@@ -69,7 +78,7 @@ export function Sidebar() {
                 key={item.name}
                 href={item.href}
                 className={cn(
-                  "flex items-center gap-3 rounded-md px-3 py-2 text-sm text-muted-foreground hover:bg-muted hover:text-foreground",
+                  "flex items-center gap-3 rounded-md px-3 py-2 text-sm text-muted-foreground transition-colors hover:bg-primary/10 hover:text-primary",
                   item.href === "/" && "bg-muted text-foreground"
                 )}
                 onClick={() => setOpen(false)}
@@ -79,6 +88,41 @@ export function Sidebar() {
               </Link>
             );
           })}
+
+          <button
+            onClick={() => setTeamManagementOpen(!teamManagementOpen)}
+            className="flex w-full items-center justify-between rounded-md px-3 py-2 text-sm text-muted-foreground transition-colors hover:bg-primary/10 hover:text-primary"
+          >
+            <div className="flex items-center gap-3">
+              <Users2 className="h-4 w-4" />
+              <span>Team Management</span>
+            </div>
+            <ChevronDown
+              className={cn(
+                "h-4 w-4 transition-transform",
+                teamManagementOpen && "rotate-180"
+              )}
+            />
+          </button>
+
+          {teamManagementOpen && (
+            <div className="space-y-1 pl-6">
+              {teamManagementItems.map((item) => {
+                const Icon = item.icon;
+                return (
+                  <Link
+                    key={item.name}
+                    href={item.href}
+                    className="flex items-center gap-3 rounded-md px-3 py-2 text-sm text-muted-foreground transition-colors hover:bg-primary/10 hover:text-primary"
+                    onClick={() => setOpen(false)}
+                  >
+                    <Icon className="h-4 w-4" />
+                    <span>{item.name}</span>
+                  </Link>
+                );
+              })}
+            </div>
+          )}
         </nav>
         <div className="mt-auto" />
       </aside>
