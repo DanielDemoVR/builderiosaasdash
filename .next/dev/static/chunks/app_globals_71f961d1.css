@@ -75,6 +75,7 @@
     --color-foreground: hsl(var(--foreground));
     --color-card: hsl(var(--card));
     --color-card-foreground: hsl(var(--card-foreground));
+    --color-primary: hsl(var(--primary));
     --color-secondary: hsl(var(--secondary));
     --color-secondary-foreground: hsl(var(--secondary-foreground));
     --color-muted: hsl(var(--muted));
@@ -592,6 +593,10 @@
     translate: var(--tw-translate-x) var(--tw-translate-y);
   }
 
+  .rotate-180 {
+    rotate: 180deg;
+  }
+
   .animate-pulse {
     animation: var(--animate-pulse);
   }
@@ -825,6 +830,10 @@
     padding-bottom: calc(var(--spacing) * 2);
   }
 
+  .pl-6 {
+    padding-left: calc(var(--spacing) * 6);
+  }
+
   .pl-9 {
     padding-left: calc(var(--spacing) * 9);
   }
@@ -1026,6 +1035,18 @@
   }
 
   @media (hover: hover) {
+    .hover\:bg-primary\/10:hover {
+      background-color: color-mix(in srgb, hsl(var(--primary)) 10%, transparent);
+    }
+
+    @supports (color: color-mix(in lab, red, red)) {
+      .hover\:bg-primary\/10:hover {
+        background-color: color-mix(in oklab, var(--color-primary) 10%, transparent);
+      }
+    }
+  }
+
+  @media (hover: hover) {
     .hover\:bg-red-600\/90:hover {
       background-color: #e40014e6;
     }
@@ -1058,6 +1079,12 @@
   @media (hover: hover) {
     .hover\:text-foreground:hover {
       color: var(--color-foreground);
+    }
+  }
+
+  @media (hover: hover) {
+    .hover\:text-primary:hover {
+      color: var(--color-primary);
     }
   }
 
